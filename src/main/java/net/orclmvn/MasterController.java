@@ -24,59 +24,110 @@ import scala.collection.generic.BitOperations.Int;
 public class MasterController {
 
 	@Autowired
-	private UserService userService;
-
+	private MemberService memberService;
+	
+	@Autowired
+	private AssetService assetService;
+	
+/*-------------------------------------------------------------------------------------------------------*/	
 	@RequestMapping("/")
-	public String usermain(Model model) {
-		List<User> listUsers = userService.listAll();
-		model.addAttribute("listUsers", listUsers);
-		return "user";
+	public String indexMain(Model model) {
+		return "index";
+	}
+	
+/*-------------------------------------------------------------------------------------------------------*/
+	
+	@RequestMapping("/dashboard")
+	public String dashboard(Model model) {
+		return "dashboard";
+	}
+	
+	@RequestMapping("/member")
+	public String memberMain(Model model) {
+		List<Member> listMembers = memberService.listAll();
+		model.addAttribute("listMembers", listMembers);
+		return "member";
 	}
 
-	@RequestMapping(value = "save", method = RequestMethod.POST)
-	public String SaveUser(@Valid User user, BindingResult result, ModelMap model,
+	@RequestMapping(value = "/member/save", method = RequestMethod.POST)
+	public String SaveMember(@Valid Member member, BindingResult result, ModelMap model,
 			RedirectAttributes redirectattributes) {
-		userService.save(user);
-		return "redirect:/";
+		memberService.save(member);
+		return "redirect:/member";
 	}
 
-	@RequestMapping(value = "/edituser/edituser", method = RequestMethod.POST)
-	public String editUser(@Valid User user, BindingResult result, ModelMap model,
+	@RequestMapping(value = "/member/update", method = RequestMethod.POST)
+	public String editAsset(@Valid Member member, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
-		userService.save(user);
-		return "redirect:/";
+		memberService.save(member);
+		return "redirect:/member";
 	}
 
-	@RequestMapping(value = "/edituser/{id}", method = RequestMethod.GET)
-	public String userEdit(@PathVariable(name = "id") int id, Model model) {
-		User user = userService.get(id);
-		model.addAttribute("user", user);
-		return "edituser";
+	@RequestMapping(value = "member/memberedit/{id}", method = RequestMethod.GET)
+	public String memberEdit(@PathVariable(name = "id") int memberid, Model model) {
+		Member member = memberService.get(memberid);
+		model.addAttribute("member", member);
+		return "memberedit";
+	}
+	
+	@RequestMapping(value = "member/delete/{id}", method = RequestMethod.GET)
+	public String deleteForm(@PathVariable(name = "id") int memberid) {
+		memberService.delete(memberid);
+		return "redirect:/member";
 	}
 
+	@RequestMapping(value = "/member/addmember", method = RequestMethod.GET)
+	public String memberForm(ModelMap model) {
+		Member member = new Member();
+		model.addAttribute("member", member);
+		return "addmember";
+	}
+
+/*----------------------------------------------------------------------------------------------------------*/
+	@RequestMapping("/asset")
+	public String assetMain(Model model) {
+		List<Asset> listAssets = assetService.listAll();
+		model.addAttribute("listAssets", listAssets);
+		return "asset";
+	}
+	
+	@RequestMapping(value = "/asset/assetadd", method = RequestMethod.GET)
+	public String assetForm(ModelMap model) {
+		Asset asset = new Asset();
+		model.addAttribute("asset", asset);
+		return "assetadd";
+	}
+	
+	@RequestMapping(value = "/asset/save", method = RequestMethod.POST)
+	public String SaveAsset(@Valid Asset asset, BindingResult result, ModelMap model,
+			RedirectAttributes redirectattributes) {
+		assetService.save(asset);
+		return "redirect:/asset";
+	}
+	
+	@RequestMapping(value = "asset/delete/{id}", method = RequestMethod.GET)
+	public String assetDeleteForm(@PathVariable(name = "id") int assetid) {
+		assetService.delete(assetid);
+		return "redirect:/asset";
+	}
+	
+	@RequestMapping(value = "asset/assetedit/{id}", method = RequestMethod.GET)
+	public String assetEdit(@PathVariable(name = "id") int assetid, Model model) {
+		Asset asset = assetService.get(assetid);
+		model.addAttribute("asset", asset);
+		return "assetedit";
+	}
+	
+	@RequestMapping(value = "/asset/update", method = RequestMethod.POST)
+	public String editAsset(@Valid Asset asset, BindingResult result, ModelMap model,
+			RedirectAttributes redirectAttributes) {
+		assetService.save(asset);
+		return "redirect:/asset";
+	}
+	
 	/*
-	 * @RequestMapping("/user") public String user(Model model) { List<User>
-	 * listUsers = userService.listAll(); model.addAttribute("listUsers",
-	 * listUsers); return "user"; }
-	 */
-
-	@RequestMapping(value = "user/delete/{id}", method = RequestMethod.GET)
-	public String deleteForm(@PathVariable(name = "id") int id) {
-		userService.delete(id);
-		return "redirect:/";
-	}
-
-	@RequestMapping(value = "adduser", method = RequestMethod.GET)
-	public String userForm(ModelMap model) {
-		User user = new User();
-		model.addAttribute("user", user);
-		return "adduser";
-	}
-
-	/*
-	 * @ModelAttribute("brands") public List<String> initializeSections() {
-	 * 
-	 * List<String> brands = new ArrayList<String>(); brands.add("PANASONIC");
-	 * brands.add("SAMSUNG"); brands.add("SANYO"); return brands; }
+	 * @ModelAttribute("category") public List<String> initializeSections(){
+	 * List<String> category= new ArrayList<String>(); category.add("Asset Tetap");
+	 * category.add("Asset Bergerak"); return category; }
 	 */
 }

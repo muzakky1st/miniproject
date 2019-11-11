@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Java Training | Dashboard</title>
+  <title>PT. Mandiri Utama Finance</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -50,14 +50,15 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="#" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>J</b>T</span>
+   <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>MUF</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Java</b>Spring with Oracle</span>
+       <img src="${pageContext.request.contextPath}/resources/dist/img/muf.png">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
+     
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
@@ -66,8 +67,8 @@
         <ul class="nav navbar-nav">
 
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="${pageContext.request.contextPath }/resources/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <img src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Zikri Muzakky</span>
             </a>
       
@@ -86,18 +87,18 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
 
-        <li><a href="${pageContext.request.contextPath }/"><i class="fa fa-user-o "></i> User</a></li>
- 
+		<li><a href="${pageContext.request.contextPath }/dashboard"><i class="fa fa-tachometer "></i> Dashboard</a></li>
+        <li><a href="${pageContext.request.contextPath }/member"><i class="fa fa-user-circle-o "></i> Member</a></li>
+ 		<li><a href="${pageContext.request.contextPath }/asset"><i class="fa fa-briefcase "></i> Asset</a></li>
+ 		
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    
+  <div class="content-wrapper">  
     	<tiles:insertAttribute name="content"></tiles:insertAttribute>
-    
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -262,7 +263,7 @@
             </label>
 
             <p>
-              Allow the user to show his name in blog posts
+              Allow the member to show his name in blog posts
             </p>
           </div>
           <!-- /.form-group -->

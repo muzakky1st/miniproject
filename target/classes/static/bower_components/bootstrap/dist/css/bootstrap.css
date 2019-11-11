@@ -1387,7 +1387,7 @@ a.bg-success:focus {
   background-color: #c1e2b3;
 }
 .bg-info {
-  background-color: #d9edf7;
+  background-color: #0077b5;
 }
 a.bg-info:hover,
 a.bg-info:focus {
@@ -3265,7 +3265,7 @@ fieldset[disabled] .btn-primary.focus {
 }
 .btn-success {
   color: #fff;
-  background-color: #2f7dff;
+  background-color: #183c6e;
   border-color: #4cae4c;
 }
 .btn-success:focus,
@@ -3309,7 +3309,7 @@ fieldset[disabled] .btn-success:focus,
 .btn-success.disabled.focus,
 .btn-success[disabled].focus,
 fieldset[disabled] .btn-success.focus {
-  background-color: #2f7dff;
+  background-color: #183c6e;
   border-color: #4cae4c;
 }
 .btn-success .badge {

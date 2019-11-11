@@ -2,22 +2,49 @@
 <!DOCTYPE tiles-definitions PUBLIC
 	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
-	
+
 <tiles-definitions>
-	<definition name="mytemplate" 
+
+	<definition name="dashboard" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/dashboard.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mytemplate"
 		template="/WEB-INF/views/admin_template.jsp">
 		<put-attribute name="content" value=""></put-attribute>
 	</definition>
-	
-	<definition name="user" extends="mytemplate">
-		<put-attribute name="content" value="/WEB-INF/views/user.jsp"></put-attribute>
+
+	<definition name="member" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/member.jsp"></put-attribute>
 	</definition>
-	
-	<definition name="edituser" extends="mytemplate">
-		<put-attribute name="content" value="/WEB-INF/views/edituser.jsp"></put-attribute>
+
+	<definition name="memberedit" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/memberedit.jsp"></put-attribute>
 	</definition>
-	<definition name="adduser" extends="mytemplate">
-		<put-attribute name="content" value="/WEB-INF/views/adduser.jsp"></put-attribute>
+
+	<definition name="addmember" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/addmember.jsp"></put-attribute>
 	</definition>
-	
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<definition name="asset" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/asset.jsp"></put-attribute>
+	</definition>
+
+	<definition name="assetadd" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/assetadd.jsp"></put-attribute>
+	</definition>
+
+	<definition name="assetedit" extends="mytemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/assetedit.jsp"></put-attribute>
+	</definition>
+
 </tiles-definitions>

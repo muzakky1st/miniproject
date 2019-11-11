@@ -1,5 +1,5 @@
 .skin-green-light .main-header .navbar {
-	background-color: #2f7dff
+	background-color: #c3e4f5
 }
 
 .skin-green-light .main-header .navbar .nav>li>a {
@@ -30,7 +30,7 @@
 }
 
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
-	background-color: #008d4c
+	background-color: #c3e4f6
 }
 
 @media ( max-width :767px) {
@@ -41,12 +41,12 @@
 		color: #fff
 	}
 	.skin-green-light .main-header .navbar .dropdown-menu li a:hover {
-		background: #008d4c
+		background: #c3e4f6
 	}
 }
 
 .skin-green-light .main-header .logo {
-	background-color: #2f7dff;
+	background-color: #c3e4f5;
 	color: #fff;
 	border-bottom: 0 solid transparent
 }
@@ -56,7 +56,7 @@
 }
 
 .skin-green-light .main-header li.user-header {
-	background-color: #2f7dff
+	background-color: #c3e4f5
 }
 
 .skin-green-light .content-header {
@@ -100,7 +100,7 @@
 }
 
 .skin-green-light .sidebar-menu>li.active {
-	border-left-color: #2f7dff
+	border-left-color: #c3e4f5
 }
 
 .skin-green-light .sidebar-menu>li.active>a {

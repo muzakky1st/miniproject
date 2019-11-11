@@ -641,7 +641,7 @@
  * -----------
  */
 .skin-green .main-header .navbar {
-  background-color: #2f7dff;
+  background-color: #e3275e;
 }
 .skin-green .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -667,7 +667,7 @@
   color: #fff;
 }
 .skin-green .main-header .navbar .sidebar-toggle:hover {
-  background-color: #008d4c;
+  background-color: #c3e4f6;
 }
 @media (max-width: 767px) {
   .skin-green .main-header .navbar .dropdown-menu li.divider {
@@ -677,11 +677,11 @@
     color: #fff;
   }
   .skin-green .main-header .navbar .dropdown-menu li a:hover {
-    background: #008d4c;
+    background: #c3e4f6;
   }
 }
 .skin-green .main-header .logo {
-  background-color: #008d4c;
+  background-color: #c3e4f6;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
@@ -689,7 +689,7 @@
   background-color: #008749;
 }
 .skin-green .main-header li.user-header {
-  background-color: #2f7dff;
+  background-color: #e3275e;
 }
 .skin-green .content-header {
   background: transparent;
@@ -717,7 +717,7 @@
   background: #1e282c;
 }
 .skin-green .sidebar-menu > li.active > a {
-  border-left-color: #2f7dff;
+  border-left-color: #e3275e;
 }
 .skin-green .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
@@ -775,7 +775,7 @@
  * -----------
  */
 .skin-green-light .main-header .navbar {
-  background-color: #2f7dff;
+  background-color: #e3275e;
 }
 .skin-green-light .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -801,7 +801,7 @@
   color: #fff;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
-  background-color: #008d4c;
+  background-color: #c3e4f6;
 }
 @media (max-width: 767px) {
   .skin-green-light .main-header .navbar .dropdown-menu li.divider {
@@ -811,19 +811,19 @@
     color: #fff;
   }
   .skin-green-light .main-header .navbar .dropdown-menu li a:hover {
-    background: #008d4c;
+    background: #c3e4f6;
   }
 }
 .skin-green-light .main-header .logo {
-  background-color: #2f7dff;
+  background-color: #e3275e;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-green-light .main-header .logo:hover {
-  background-color: #2f7dff;
+  background-color: #e3275e;
 }
 .skin-green-light .main-header li.user-header {
-  background-color: #2f7dff;
+  background-color: #e3275e;
 }
 .skin-green-light .content-header {
   background: transparent;
@@ -859,7 +859,7 @@
   background: #f4f4f5;
 }
 .skin-green-light .sidebar-menu > li.active {
-  border-left-color: #2f7dff;
+  border-left-color: #e3275e;
 }
 .skin-green-light .sidebar-menu > li.active > a {
   font-weight: 600;
